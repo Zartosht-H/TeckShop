@@ -13,6 +13,7 @@
 * {
   box-sizing: border-box;
   font-family: 'Negar';
+  margin: 0;
 }
 
 body {
@@ -118,6 +119,10 @@ h1 {
   color: white;
 }
 
+h4 {
+  margin: 0px;
+}
+
 .shopping_pic {
   width: 100%;
   max-height: 300px;
@@ -146,21 +151,24 @@ h1 {
   margin-top: 0px;
 }
 
-.posts h2 {
+.posts h2{
   margin: 20px 0px 10px 0px;
   padding: 0px 5px;
 }
 
 .post {
   width: 100%;
-  height: 400px;
+  height: auto;
   float: right;
   padding: 5px;
 }
 
-.post div {
+.post > div {
   box-shadow: 1px 1px 2px #0c250d44;
   text-align: center;
+  margin: 0px;
+  padding: 5px;
+  border-radius: 4px;
 }
 
 .product_image {
@@ -168,37 +176,73 @@ h1 {
   max-height: 250px;
 }
 
+.first_line , .second_line {
+  padding: 5px;
+}
+
 .product_title {
+  font-size: 12pt;
+  font-weight: normal;
+  text-align: right;
+  float: right;
+  margin: 0px;
+}
+
+.price {
+  float:left;
   font-size: 10pt;
   font-weight: normal;
-  text-align: center;
+  margin: 0px;
 }
 
 .product_description {
   font-size: 8pt;
   font-weight: normal;
   text-align: right;
+  float: right;
+  margin: 0px;
+  width: 60%;
 }
 
-.ads {}
-
-.left_ads {
-  width: 25%;
+.discount {
   float: left;
+  text-align: left;
+  font-size: 10pt;
+  font-weight: normal;
+  text-decoration: line-through;
+  margin: 0px;
+  width: 40%;
+  color: #999;
 }
 
-.center_ads {
-  width: 50%;
-  float: right;
+.ads {
+  background-color: #449672;
+  margin: 10px 0;
+  padding: 10px 0;
 }
 
-.right_ads {
-  width: 25%;
-  float: right;
+.ads_cards {
+  height: auto;
+  text-align: center;
 }
 
-.ads img {
-  max-height: 300px;
+.ads_card {
+  display: inline-block;
+  padding: 7px;
+}
+
+.ads_cards img {
+  width: 100%;
+  max-height: 260px;
+  border-radius: 4px;
+}
+
+.quart1 {
+  display:none;
+}
+
+.quart2 {
+  display:none;
 }
 
 @media screen and (min-width: 600px) {
@@ -211,7 +255,7 @@ h1 {
   }
 
   .post {
-    height: 400px;
+    height: auto;
     width: 50%;
   }
 
@@ -219,6 +263,7 @@ h1 {
     width: 100%;
     max-height: 400px;
   }
+    
 }
 
 @media screen and (min-width: 700px) {
@@ -235,8 +280,19 @@ h1 {
   h1 {
     font-size: 44pt;
   }
+  .ads_cards img {
+    height:195px;
+  }
+  .quart1 {
+    display:inline-block;
+  }
 }
 
+@media screen and (min-width: 900px) {
+  .ads_cards img {
+    height:225px;
+  }
+}
 @media screen and (min-width: 1000px) {
   .container {
     padding: 0px 80px;
@@ -248,7 +304,7 @@ h1 {
 
   .post {
     width: 25%;
-    height: 500px;
+    height: auto;
     float: right;
     padding: 5px;
   }
@@ -263,6 +319,13 @@ h1 {
     max-height: 600px;
   }
 
+  .ads_cards img {
+    height:180px;
+  }
+
+  .quart2 {
+    display:inline-block;
+  }
 }
 
 @media screen and (min-width: 1150px) {
@@ -272,5 +335,21 @@ h1 {
 
   h1 {
     font-size: 70pt;
+  }
+
+  .ads_cards img {
+    height: 205px;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .ads_cards img {
+    height: 230px;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  .ads_cards img {
+    height: 250px;
   }
 }
